@@ -34,7 +34,7 @@ namespace BulkyBook.DataAccess.Repository
         public IOrderHeaderRepository OrderHeader {  get; private set; }
         public IOrderDetailRepository OrderDetail {  get; private set; }
 
-               public void Save()
+        public void Save()
         {
             _db.SaveChanges();
         }

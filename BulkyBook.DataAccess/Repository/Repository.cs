@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace BulkyBook.DataAccess.Repository
 {
+    // Implementación de Repositorio Generico
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly ApplicationDbContext _db;
-        internal DbSet<T> dbSet;
+        private readonly ApplicationDbContext _db; // Base de datos
+        internal DbSet<T> dbSet; // variable interna para setear la BD
 
         public Repository(ApplicationDbContext db)
         {

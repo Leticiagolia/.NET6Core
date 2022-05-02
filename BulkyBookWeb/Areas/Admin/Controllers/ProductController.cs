@@ -59,11 +59,10 @@ public class ProductController : Controller
             return View(productVM);
         }
         else
-        {
-            productVM.Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
-            return View(productVM);
-
+        { 
             //update product
+            productVM.Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
+            return View(productVM);           
         }
 
 
@@ -80,9 +79,9 @@ public class ProductController : Controller
             string wwwRootPath = _hostEnvironment.WebRootPath;
             if (file != null)
             {
-                string fileName = Guid.NewGuid().ToString();
-                var uploads = Path.Combine(wwwRootPath, @"images\products");
-                var extension = Path.GetExtension(file.FileName);
+                string fileName = Guid.NewGuid().ToString(); //nombre
+                var uploads = Path.Combine(wwwRootPath, @"images\products"); //ruta
+                var extension = Path.GetExtension(file.FileName); //extensión
 
                 if (obj.Product.ImageUrl != null)
                 {

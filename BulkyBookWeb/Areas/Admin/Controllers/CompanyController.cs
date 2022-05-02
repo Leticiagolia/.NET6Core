@@ -49,7 +49,7 @@ public class CompanyController : Controller
     //POST
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Upsert(Company obj, IFormFile? file)
+    public IActionResult Upsert(Company obj)
     {
 
         if (ModelState.IsValid)

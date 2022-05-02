@@ -15,8 +15,8 @@ function loadDataTable() {
             { "data": "price", "width": "15%" },
             { "data": "author", "width": "15%" },
             { "data": "category.name", "width": "15%" },
-            {
-                "data": "id",
+            { "data": "coverType.name", "width": "15%" },
+            { "data": "id",
                 "render": function (data) {
                     return `
                         <div class="w-75 btn-group" role="group">
