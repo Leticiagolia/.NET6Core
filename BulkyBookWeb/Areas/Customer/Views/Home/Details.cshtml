@@ -53,6 +53,7 @@
                                 </div>
                             </div>
                             <div class="row pl-2">
+                                @*Agrega el Html.Raw ya que el text area de la descripcion le agrega tag a la BD*@
                                 <p class="text-secondary">@Html.Raw(Model.Product.Description)</p>
                             </div>
                             <div class="row pl-2">

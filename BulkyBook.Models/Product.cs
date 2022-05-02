@@ -50,7 +50,7 @@ namespace BulkyBook.Models
         [Required]
         [Display(Name ="Cover Type")]
         public int CoverTypeId { get; set; }
-        [ValidateNever]
+        [ValidateNever] // Excluye la validación
         public CoverType CoverType { get; set; }
     }
 }

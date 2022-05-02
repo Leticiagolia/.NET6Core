@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// View Model - Carrito de compras
 namespace BulkyBook.Models.ViewModels
 {
     public class ShoppingCartVM

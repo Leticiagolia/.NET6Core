@@ -54,15 +54,15 @@ namespace BulkyBook.DataAccess.DbInitializer
 
                 _userManager.CreateAsync(new ApplicationUser
                 {
-                    UserName = "admin@dotnetmastery.com",
-                    Email = "admin@dotnetmastery.com",
-                    Name = "Bhrugen Patel",
-                    PhoneNumber = "1112223333",
-                    StreetAddress = "test 123 Ave",
-                    State = "IL",
-                    PostalCode = "23422",
-                    City = "Chicago"
-                }, "Admin123*").GetAwaiter().GetResult();
+                    UserName = "LeticiaGolia",
+                    Email = "Leticiagolia@gmai.com",
+                    Name = "Leticia Golia",
+                    PhoneNumber = "2364-580307",
+                    StreetAddress = "Santa fe 134",
+                    State = "Argentina",
+                    PostalCode = "6740",
+                    City = "Chacabuco"
+                }, "Admin123.").GetAwaiter().GetResult();
 
                 ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "admin@dotnetmastery.com");
 

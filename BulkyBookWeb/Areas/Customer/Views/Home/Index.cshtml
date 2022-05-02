@@ -13,9 +13,9 @@
 						<div class="card-body">
 						<div class="pl-1">
 							<p class="card-title h5 text-primary">@product.Title</p>
-							<p class="card-title text-info">by <b>@product.Author</b></p>
+							<p class="card-title text-dark">Author: <b>@product.Author</b></p>
 						</div>
-						<div class="pl-1">
+						<div class="pl-1 text-secondary">
 							<p>List Price: <strike><b>$@product.ListPrice.ToString("0.00")</b></strike></p>
 						</div>
 						<div class="pl-1">
@@ -24,8 +24,8 @@
 						</div>
 					</div>
 					<div>
-						<a asp-action="Details" class="btn btn-primary form-control" asp-route-productId="@product.Id">
-							Details
+						<a asp-action="Details" class="btn btn-outline-primary form-control mt-2" asp-route-productId="@product.Id">
+							DETAILS
 						</a>
 					</div>
 				</div> 

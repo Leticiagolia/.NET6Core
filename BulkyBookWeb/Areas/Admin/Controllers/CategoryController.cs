@@ -74,7 +74,7 @@ public class CategoryController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult Edit(Category obj)
     {
-        if (obj.Name == obj.DisplayOrder.ToString())
+        if (obj.Name == obj.DisplayOrder.ToString()) //validación del lado del servidor, mismo nombre
         {
             ModelState.AddModelError("name", "The DisplayOrder cannot exactly match the Name.");
         }
