@@ -40,8 +40,8 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
             foreach(var cart in ShoppingCartVM.ListCart)
             {
                 cart.Price = GetPriceBasedOnQuantity(cart.Count, cart.Product.Price,
-                    cart.Product.Price50, cart.Product.Price100);
-                ShoppingCartVM.OrderHeader.OrderTotal += (cart.Price * cart.Count);
+                    cart.Product.Price50, cart.Product.Price100); // llamado al metodo que contabiliza precio*cant.
+                ShoppingCartVM.OrderHeader.OrderTotal += (cart.Price * cart.Count); //Totaliza precio * cantidad
             }
             return View(ShoppingCartVM);
         }
@@ -237,11 +237,8 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
-
-
-
-        private double GetPriceBasedOnQuantity(double quantity, double price, double price50, double price100)
+        //Metodo que recibe la cantidad y los 3 diferentes precios
+        private double GetPriceBasedOnQuantity(double quantity, double price, double price50, double price100) 
         {
             if (quantity <= 50)
             {

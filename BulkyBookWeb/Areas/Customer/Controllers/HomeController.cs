@@ -31,6 +31,7 @@ public class HomeController : Controller
         return View(productList);
     }
 
+    //Get del detalle - busca el libro por id y deja el campo de cantidad en 1
     public IActionResult Details(int productId)
     {
         ShoppingCart cartObj = new()

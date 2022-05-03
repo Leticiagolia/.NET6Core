@@ -9,12 +9,12 @@ namespace BulkyBook.DataAccess.Repository.IRepository
 {
     public interface IRepository<T> where T : class
     {
-        // Repositorio generico
-        //T - Category
-        T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null,bool tracked = true);
-        IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter=null, string? includeProperties = null);
-        void Add(T entity);
-        void Remove(T entity);
-        void RemoveRange(IEnumerable<T> entity);
+        // Repositorio generico, implementa los metodos pasandole una tabla
+        //T - tabla generica
+        T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null,bool tracked = true); // Devuelve un campo de la tabla T
+        IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter=null, string? includeProperties = null); // Devuelve todos los campos de la tabla T
+        void Add(T entity); // Agregar a la tabla
+        void Remove(T entity); // Borrar de la tabla
+        void RemoveRange(IEnumerable<T> entity); // Borrar rango de campos de una tabla
     }
 }
